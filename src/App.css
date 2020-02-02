@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --primaryColor: #535a5e;
+    --mainWhite: #fff;
+    --offWhite: #f7f7f7;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #cfcfcf;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 3px;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* animation home */
+
+@keyframes panning {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: black url(https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 130%;
+    animation: panning 30s infinite linear;
 }
 
-.App-link {
-  color: #61dafb;
+.home-page {
+    -webkit-font-smoothing: antialiased;
+    width: 60%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 60em;
+    background-color: rgba(243, 232, 232, 0.658);
+    border-radius: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-search {
+    width: 35em;
+    font-weight: bold;
+}
+
+.icon-search {
+    margin-left: 0.5em;
+    font-size: 3em !important;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+
+/* component list item */
+
+.list-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 3em;
+}
+
+
+/* component item */
+
+.item-container {
+    margin-top: 1rem;
+    width: 20%;
+    cursor: pointer;
+}
+
+.show-item {
+    display: flex;
+}
+
+.icon-item {
+    color: var(--primaryColor);
+    font-size: 2em !important;
+}
+
+.name-file {
+    color: var(--primaryColor);
+    font-size: 1.22em;
+    margin-left: 5px;
+    float: right;
+}
+
+
+/* item info */
+
+.title-info {
+    display: block;
+    color: var(--primaryColor);
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primaryColor);
 }
